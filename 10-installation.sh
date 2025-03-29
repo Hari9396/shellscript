@@ -10,7 +10,7 @@ else
     echo "You are super user."
 fi
 
-apt install mysql -y
+apt install mysql-server -y
 
 if [ $? -ne 0 ]
 then
