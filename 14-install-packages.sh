@@ -30,7 +30,7 @@ fi
 for i in $@
 do
     echo "package to install: $i"
-    apt list installed $i &>>$LOGFILE
+    dpkg -l | grep -w "$i" &>>$LOGFILE
     if [ $? -eq 0 ]
     then
         echo -e "$i already installed...$Y SKIPPING $N"
